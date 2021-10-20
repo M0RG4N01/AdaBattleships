@@ -4,5 +4,7 @@ namespace AdaBattleships.Interfaces
     {
         //Method for taking turn 
         public void TakeTurn();
+        //Player print own board to screen
+        public void PrintBoard();
     }
 }

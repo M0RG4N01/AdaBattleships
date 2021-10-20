@@ -5,7 +5,7 @@ namespace AdaBattleships
 {
     public class MainMenu : IMenu
     {
-        private Game game = new Game();
+        private Game _game;
 
         public void PrintMenu()
         {
@@ -23,12 +23,14 @@ namespace AdaBattleships
             {
                 case 1:
                 {
-                    game.Start();
+                    _game = new Game(new RealPlayer(), new RealPlayer());
+                    _game.Start();
                     break;
                 }
                 case 2:
                 {
-                    game.Start();
+                    _game = new Game(new RealPlayer(), new AIPlayer());                               
+                    _game.Start();
                     break;
                 }
                 case 3:

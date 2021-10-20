@@ -3,7 +3,7 @@ using AdaBattleships.Interfaces;
 
 namespace AdaBattleships.Models
 {
-    public class PlayerBase : IPlayer
+    public abstract class PlayerBase : IPlayer
     {
         public Board Board { get; set; }
 
@@ -16,9 +16,7 @@ namespace AdaBattleships.Models
             Board = board;
         }
 
-        public void TakeTurn()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract void TakeTurn();
+        public abstract void PrintBoard();
     }
 }

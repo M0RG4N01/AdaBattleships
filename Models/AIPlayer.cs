@@ -2,7 +2,7 @@ using AdaBattleships.Interfaces;
 
 namespace AdaBattleships.Models
 {
-    public class AIPlayer : PlayerBase, IPlayer
+    public class AIPlayer : PlayerBase
     {
         public AIPlayer()
         {
@@ -12,7 +12,12 @@ namespace AdaBattleships.Models
         {
         }
 
-        public void TakeTurn()
+        public override void TakeTurn()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void PrintBoard()
         {
             throw new System.NotImplementedException();
         }
